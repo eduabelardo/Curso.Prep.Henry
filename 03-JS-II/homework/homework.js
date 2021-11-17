@@ -5,7 +5,7 @@ function obtenerMayor(x, y) {
   // Devuelve el número más grande
   // Si son iguales, devuelve cualquiera de los dos
   // Tu código:
-  if (x > y) {
+  if (x >= y) {
     return x;
   } else {
     return y;
@@ -70,19 +70,14 @@ function colors(color) {
   switch(color) {
     case 'blue':
       return 'This is blue'
-      break;
     case 'red':
       return 'This is red'
-      break;
     case 'green':
       return 'This is green'
-      break;
     case 'orange':
       return 'This is orange'
-      break;
     default:
-      return 'Color not found'
-      break;     
+      return 'Color not found' 
   }
 }
 
@@ -134,7 +129,7 @@ function operadoresLogicos(num1, num2, num3) {
   } else if(num1 === 0 || num2 === 0 || num3 === 0) {
     return 'Error';
   } else if(num3 > num1 && num3 > num2) {
-    return num3 + 1;
+    return num3 += 1;
   } else if(num1 > num2 && num1 > num3 && num1 > 0) {
     return 'Número 1 es mayor y positivo';
   } else {
@@ -177,11 +172,12 @@ function tablaDelSeis(){
   //Escribe una función que muestre la tabla de multiplicar del 6 (del 0 al 60).
   //La función devuelve un array con los resultados de la tabla de multiplicar del 6 en orden creciente.
   //Escribe tu código aquí   
-  let arrayTablaDel6 = []
-  for (let i = 0; i < 11; i++) {
-        arrayTablaDel6.push(6 * i)
-  }
-  return arrayTablaDel6
+ 
+let arrayTablaDelSeis = [];
+for (let i = 0; i < 11; i++) {
+  arrayTablaDelSeis.push(6 * i);
+}
+return arrayTablaDelSeis;
 }
 
 function tieneTresDigitos(numero){
@@ -198,13 +194,13 @@ function doWhile(numero) {
   //Implementar una función tal que vaya aumentando el valor recibido en 5 hasta un límite de 8 veces
   //Retornar el valor final.
   //Usar el bucle do ... while.
-  let a = numero;
-  let i = 0;
-  do{
-    i = i + 1;
-    a = a + 5;
-  } while (i < 8);
-  return a;
+  
+  let contador = 0
+  do { 
+    numero = numero + 5;
+    contador++
+  } while (contador < 8);
+  return numero;
 }
 
 
